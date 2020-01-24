@@ -20,7 +20,7 @@ acc = weights * exp{-misses * penalty}
 where a `penalty` was assigned for skipping `rounds`. The equations for penalty are subjective and I played the games over and over to tune the numbers so it's not a good approach but worked out pretty well at the end.
 
 2. Path Efficiency:
-I calculated the efficiency of the `path` taken by a child to arrive at the assignment. It was done by a very similar process to what we use for full backward tree search in dynamic programming a discrete time Markov Reward Process (MRP) with a discounting. This was driven by the fact that child who skips or deviates from the sequence of games designed by PBS KIDS, often does a poorly in an assignment.
+I calculated the efficiency of the `path` taken by a child to arrive at the assignment. It was done by a very similar process to what we use for full backward tree search in dynamic programming for a discrete time Markov Reward Process (MRP) with a discounting. This was driven by the fact that child who skips or deviates from the sequence of games designed by PBS KIDS, often does a poorly in an assignment.
 
 The above two features helped the model quite a bit.
 
