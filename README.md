@@ -1,4 +1,9 @@
 # Kaggle - National Data Science Bowl 2019
+
+| Public Leeaderboard(QWK) | Private Leaderboard(QWK) |
+|-------------------------:|-------------------------:| 
+| 593(0.551)               | 62(0.550)                |
+
 This repository contains my solution for the National Data Science Bowl 2019 held in [Kaggle](https://www.kaggle.com/c/data-science-bowl-2019) over the last 3 months. The solution in itself is pretty straightforward but I manually engineered a number of features which I found very interesting.
 
 1. Individual `game` / `activity` performance features:
@@ -11,4 +16,9 @@ Then the accuracy/performance of the game/activity was measured by something lik
 ```math
 acc = weights * exp{-misses * penalty}
 ```
-where a `penalty` was assigned for skipping `rounds`.
+where a `penalty` was assigned for skipping `rounds`. The equations for penalty are subjective and I played the games over and over to tune the numbers so it's not a good approach but worked out pretty well at the end.
+
+2. Path Efficiency:
+I calculated the efficiency of the `path` taken by a child to arrive at the assignment. It was done by a very similar process to what we use for full backward tree search in a discrete time Markov Reward Process (MRP) with a discounting. 
+
+Apart from that
